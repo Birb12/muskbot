@@ -1,5 +1,5 @@
 # muskbot
-GPT-2 based Transformer model to talk like some guy
+GPT-2 based Transformer model to talk like some guy: https://twitter.com/gusk_elon
 
 ## Why did you do this?
 
