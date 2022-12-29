@@ -48,7 +48,7 @@ def generate_tweet():
     for i, sample_output in enumerate(sample_outputs):
         return tokenizer.decode(sample_output, skip_special_tokens=True)
 
-def pretty_tweet(tweet): # for some reason, the model always outputs some random word (big, eject) before the actual tweet starts
+def pretty_tweet(tweet): # for some reason, the model always outputs some random word (big, eject) before the actual tweet starts, this is probably my fault by messing up the loading of the data, but im not paying for more cloud processing time
     if '@' in tweet:
         while (tweet[0] != '@'):
             tweet = tweet[1:]
