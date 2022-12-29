@@ -29,7 +29,7 @@ def generate_tweet():
     device = torch.device("cpu")
     model.to("cpu")
 
-    seed_val = random.randint(1, 42) # reproducibility? whats that?
+    seed_val = random.randint(0, 50000000) # reproducibility? whats that?
 
     random.seed(seed_val)
     np.random.seed(seed_val)
@@ -46,4 +46,12 @@ def generate_tweet():
                                         num_return_sequences=1
                                     )
     for i, sample_output in enumerate(sample_outputs):
-        return i, tokenizer.decode(sample_output, skip_special_tokens=True)
+        return tokenizer.decode(sample_output, skip_special_tokens=True)
+
+def pretty_tweet(tweet): # for some reason, the model always outputs some random word (big, eject) before the actual tweet starts
+    if '@' in tweet:
+        while (tweet[0] != '@'):
+            tweet = tweet[1:]
+        return tweet
+        
+
