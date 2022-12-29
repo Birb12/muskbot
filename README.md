@@ -11,4 +11,4 @@ To be funny
 
 ## Will you ever update this bot?
 
-No
+No, I'm abusing the Google Cloud free trial
