@@ -5,7 +5,8 @@ access_token = "gloop"
 access_secret = "glop"
 
 def tweets():
-    tweet = generate_tweet()
+    tweet = str(generate_tweet())
+    tweet = pretty_tweet(tweet)
     return tweet
 
 def format_tweet(tweet):
@@ -29,3 +30,4 @@ def hello_pubsub():
    print(request)
 
 hello_pubsub()
+
